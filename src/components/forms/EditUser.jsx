@@ -7,7 +7,8 @@ function EditUser({users, setUsers, setIsFormEditActive, userToEdit, setUserToEd
     const [lastname, setLastname] = useState(userToEdit.lastname);
     
 
-    // 
+    // use of useEffect to force updating of values 
+    // firstname and lastname are updated each time userToEdit change
     useEffect(() => {
         setFirstname(userToEdit.firstname);
         setLastname(userToEdit.lastname);
