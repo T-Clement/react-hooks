@@ -20,7 +20,7 @@ function App() {
             // users = { users } setUsers = { setUsers } 
             userToEdit = { userToEdit } setUserToEdit = { setUserToEdit }
           />
-          <UserTable isFormEditActive = {isFormEditActive} setIsFormEditActive = { setIsFormEditActive } 
+          <UserTable setIsFormEditActive = { setIsFormEditActive } 
             // users = { users } setUsers = { setUsers } 
             setUserToEdit = { setUserToEdit }
           />

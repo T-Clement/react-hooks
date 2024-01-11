@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { UsersContext } from '../UsersProvider';
-function UserTable({ isFormEditActive, setIsFormEditActive, setUserToEdit}) {
+function UserTable({ setIsFormEditActive, setUserToEdit}) {
 
     // STATES
 
@@ -16,12 +16,10 @@ function UserTable({ isFormEditActive, setIsFormEditActive, setUserToEdit}) {
 
     const handleEdit = (user) => {
         setUserToEdit(null)
-        // user entier ou user.id que l'on cible avec array_reduce // array_filter?
         // console.log("Edit : ");
         // console.log(user);
         setIsFormEditActive(true);
         setUserToEdit(user);
-
     }
 
 
@@ -41,8 +39,6 @@ function UserTable({ isFormEditActive, setIsFormEditActive, setUserToEdit}) {
                 </tr>
             </thead>
             <tbody>
-
-                {/* { users.map((user) => <UserRow user= {user}/>) } */}
 
                 { users.map((user) => 
                     <tr key = {user.id}  id = {user.id}>
