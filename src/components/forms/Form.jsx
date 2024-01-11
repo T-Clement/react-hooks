@@ -1,6 +1,6 @@
 import React from 'react'
-import AddUser from './AddUser'
-import EditUser from './EditUser'
+import AddUserForm from './AddUserForm'
+import EditUserForm from './EditUserForm'
 
 function Form({users, setUsers, isFormEditActive, setIsFormEditActive, userToEdit, setUserToEdit}) {
   return (
@@ -8,11 +8,11 @@ function Form({users, setUsers, isFormEditActive, setIsFormEditActive, userToEdi
     <div className='col-6'>
       { 
         isFormEditActive ? 
-          <EditUser users = { users } setUsers = { setUsers } 
+          <EditUserForm users = { users } setUsers = { setUsers } 
             setIsFormEditActive = {setIsFormEditActive} 
             userToEdit = { userToEdit } setUserToEdit = { setUserToEdit }
           /> : 
-          <AddUser users = { users } setUsers = { setUsers } />
+          <AddUserForm users = { users } setUsers = { setUsers } />
     }
     </div>
 

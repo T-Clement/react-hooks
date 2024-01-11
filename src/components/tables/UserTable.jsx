@@ -1,5 +1,4 @@
 import React from 'react'
-import UserRow from './UserRow'
 
 function UserTable({users, setUsers, isFormEditActive, setIsFormEditActive, setUserToEdit}) {
 

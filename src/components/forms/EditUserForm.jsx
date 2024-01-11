@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function EditUser({users, setUsers, setIsFormEditActive, userToEdit, setUserToEdit}) {
+function EditUserForm({users, setUsers, setIsFormEditActive, userToEdit, setUserToEdit}) {
 
     // STATES WHO COMES FROM CLICK
     const [firstname, setFirstname] = useState(userToEdit.firstname);
@@ -42,7 +42,18 @@ function EditUser({users, setUsers, setIsFormEditActive, userToEdit, setUserToEd
 
         // console.log(usersCopy);
         
+        // update users state
         setUsers(usersCopy);
+
+        // reset all states
+        setFirstname("");
+        setLastname("");
+        setIsFormEditActive(false);
+        setUserToEdit(null);
+    }
+
+
+    const cancelEdition = () => {
         setFirstname("");
         setLastname("");
         setIsFormEditActive(false);
@@ -63,9 +74,10 @@ function EditUser({users, setUsers, setIsFormEditActive, userToEdit, setUserToEd
                 <input type="text" className="form-control" id="lastname" onChange = { handleChange } value = { lastname } />
             </div>
             <button id="" className='btn btn-warning'>Edit User</button>
+            <button onClick = { cancelEdition } className='btn btn-secondary'>Cancel</button>
         </form>
     </div>
   )
 }
 
-export default EditUser
+export default EditUserForm

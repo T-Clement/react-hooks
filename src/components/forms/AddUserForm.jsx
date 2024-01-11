@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function AddUser({users, setUsers}) {
+function AddUserForm({users, setUsers}) {
     // STATES
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastname] = useState("");
@@ -55,4 +55,4 @@ function AddUser({users, setUsers}) {
   )
 }
 
-export default AddUser
+export default AddUserForm

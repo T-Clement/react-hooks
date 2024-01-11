@@ -2,23 +2,26 @@ import { useState } from 'react'
 import Title from "./components/Title";
 import Form from './components/forms/Form';
 import UserTable from './components/tables/UserTable';
+
+
+
 function App() {
 
   const USERS = [
     {
       id: new Date().getTime() - Math.round(Math.random() * 1000),
-      firstname: "Clément",
-      lastname: "Toquet"
+      firstname: "Tom",
+      lastname: "Morello"
     },
     {
       id: new Date().getTime() - Math.round(Math.random() * 1000),
-      firstname: "Florian",
-      lastname: "Boismain"
+      firstname: "Thom",
+      lastname: "Yorke"
     },
     {
       id: new Date().getTime() - Math.round(Math.random() * 1000),
-      firstname: "Pacôme",
-      lastname: "Perrichot"
+      firstname: "David",
+      lastname: "Gilmour"
     }
   ]
 
