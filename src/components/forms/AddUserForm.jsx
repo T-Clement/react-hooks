@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
-
-function AddUserForm({users, setUsers}) {
+import React, { useContext, useState } from 'react'
+import { UsersContext } from '../UsersProvider';
+function AddUserForm() {
+    
+    // users Global context
+    const {users, setUsers} = useContext(UsersContext);
     // STATES
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastname] = useState("");

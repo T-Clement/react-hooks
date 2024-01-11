@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { UsersContext } from '../UsersProvider';
 
-function EditUserForm({users, setUsers, setIsFormEditActive, userToEdit, setUserToEdit}) {
+function EditUserForm({setIsFormEditActive, userToEdit, setUserToEdit}) {
 
+    const {users, setUsers} = useContext(UsersContext);
+    
     // STATES WHO COMES FROM CLICK
     const [firstname, setFirstname] = useState(userToEdit.firstname);
     const [lastname, setLastname] = useState(userToEdit.lastname);
@@ -10,6 +13,7 @@ function EditUserForm({users, setUsers, setIsFormEditActive, userToEdit, setUser
     // use of useEffect to force updating of values 
     // firstname and lastname are updated each time userToEdit change
     useEffect(() => {
+        console.log("Le composant est re-rendu");
         setFirstname(userToEdit.firstname);
         setLastname(userToEdit.lastname);
     }, [userToEdit]);

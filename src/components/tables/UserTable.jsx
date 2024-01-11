@@ -1,10 +1,10 @@
-import React from 'react'
-
-function UserTable({users, setUsers, isFormEditActive, setIsFormEditActive, setUserToEdit}) {
+import React, { useContext } from 'react'
+import { UsersContext } from '../UsersProvider';
+function UserTable({ isFormEditActive, setIsFormEditActive, setUserToEdit}) {
 
     // STATES
 
-
+    const {users, setUsers} = useContext(UsersContext);
 
 
     // COMPORTEMENTS
