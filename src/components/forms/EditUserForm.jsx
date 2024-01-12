@@ -13,7 +13,7 @@ function EditUserForm({setIsFormEditActive, userToEdit, setUserToEdit}) {
     // use of useEffect to force updating of values 
     // firstname and lastname are updated each time userToEdit change
     useEffect(() => {
-        console.log("Le composant est re-rendu");
+        // console.log("Le composant est re-rendu");
         setFirstname(userToEdit.firstname);
         setLastname(userToEdit.lastname);
     }, [userToEdit]);
@@ -28,7 +28,7 @@ function EditUserForm({setIsFormEditActive, userToEdit, setUserToEdit}) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("User edition saved");
+        // console.log("User edition saved");
 
 
         // find the index in the users array corresponding to the id of the userToEdit id

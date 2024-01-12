@@ -5,7 +5,6 @@ import UserTable from './components/tables/UserTable';
 import { UsersProvider } from './components/UsersProvider';
 
 
-
 function App() {
 
   const [isFormEditActive, setIsFormEditActive] = useState(false)

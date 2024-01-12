@@ -2,7 +2,7 @@ import React from 'react'
 import AddUserForm from './AddUserForm'
 import EditUserForm from './EditUserForm'
 
-function Form({users, setUsers, isFormEditActive, setIsFormEditActive, userToEdit, setUserToEdit}) {
+function Form({ isFormEditActive, setIsFormEditActive, userToEdit, setUserToEdit }) {
   // console.log(userToEdit.id);
   // if(userToEdit) {
   //   console.log(userToEdit.id);
